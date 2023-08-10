@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+
+/*------ ## Colors ------*/
+:root {
+
+
+    /* ### Primary */
+
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    /* ### Neutral */
+
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+
+
+
+/*------ css reset------ */
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+    font-size: inherit;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+
+
+
+
+
+
+
+/* ------ body styling ------ */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: var(--Very-Dark-Blue);
+    background-color: var(--Very-Light-Gray);
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+
+}
+
+main {
+    margin: 80px 30px;
+    max-width: 1100px;
+    min-width: 315px;
+}
+
+
+
+/* ------ header styling ------ */
+.header {
+    text-align: center;
+    margin-bottom: 80px;
+
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.header h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+
+}
+
+.header p {
+    color: var(--Grayish-Blue);
+}
+
+@media (min-width:1000px) {
+    .header {
+        position: relative;
+        text-align: center;
+        max-width: 490px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .header h1,
+    .header h2 {
+        font-size: 34px;
+    }
+}
+
+/* ------ cards styling ------ */
+
+.mutual {
+    background-color: white;
+    padding: 24px 24px 88px;
+    margin-bottom: 24px;
+    box-shadow: 0px 10px 14px hsla(212, 58%, 55%, 0.15);
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.mutual h3 {
+    font-size: 20px;
+}
+
+.mutual p {
+    font-size: 13px;
+    color: var(--Grayish-Blue);
+    margin: 6px 0 30px;
+}
+
+.mutual img {
+    position: absolute;
+    right: 24px;
+    width: 60px;
+}
+
+.cards {
+    display: grid;
+}
+
+@media (min-width:1000px) {
+    .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .mutual {
+        margin-bottom: 30px;
+    }
+
+    .mutual p {
+        margin: 10px 0 46px;
+    }
+
+    .mutual {
+        padding: 24px 24px 100px;
+    }
+
+    .mutual img {
+        width: 64px;
+    }
+}
+
+
+/* ------ card strip ------ */
+
+.first-card::before {
+    content: "";
+    background-color: var(--Cyan);
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+}
+
+.second-card::before {
+    content: "";
+    background-color: var(--Red);
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+}
+
+
+.third-card::before {
+    content: "";
+    background-color: var(--Orange);
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+}
+
+
+.fourth-card::before {
+    content: "";
+    background-color: var(--Blue);
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+}
